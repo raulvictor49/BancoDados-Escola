@@ -53,9 +53,7 @@ CREATE TABLE DEPARTAMENTO(
     nome VARCHAR(100),
     gestor VARCHAR(100),
     localizacao VARCHAR(100),
-    id_prof_disc VARCHAR(14),
     CONSTRAINT pk_departamento PRIMARY KEY (id_dept),
-    FOREIGN KEY (id_prof_disc) REFERENCES PROFESSOR_DISCIPLINA(cpf_prof)
 );
 
 CREATE TABLE EX_ALUNO(
