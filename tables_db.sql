@@ -53,7 +53,7 @@ CREATE TABLE DEPARTAMENTO(
     nome VARCHAR(100),
     gestor VARCHAR(100),
     localizacao VARCHAR(100),
-    CONSTRAINT pk_departamento PRIMARY KEY (id_dept),
+    CONSTRAINT pk_departamento PRIMARY KEY (id_dept)
 );
 
 CREATE TABLE EX_ALUNO(
@@ -84,8 +84,10 @@ CREATE TABLE ADMINISTRATIVO(
 CREATE TABLE ALUNO_MONITOR(
     tempo_monitoria VARCHAR(50),
     cpf_func VARCHAR(14),
+    matricula_aluno VARCHAR(20),
     CONSTRAINT pk_aluno_monitor PRIMARY KEY (cpf_func),
-    FOREIGN KEY (cpf_func) REFERENCES FUNCIONARIO(cpf_func)
+    FOREIGN KEY (cpf_func) REFERENCES FUNCIONARIO(cpf_func),
+    FOREIGN KEY (matricula_aluno) REFERENCES ALUNO(matricula)
 );
 
 CREATE TABLE DISCIPLINA(
